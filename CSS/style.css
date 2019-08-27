@@ -1,0 +1,19 @@
+body{
+    padding:0 !important;
+    margin:0 !important;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color:black !important;
+}
+nav{
+    background-color: black;
+}
+.nav-link{
+    color: white !important;
+    padding:5px !important;
+    text-align: center !important;
+}
+.nav-link:hover{
+    color: #0158fa!important;
+    padding: 2px  !important;
+    transition: 0.5s !important;
+}
