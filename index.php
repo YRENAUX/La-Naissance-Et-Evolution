@@ -81,6 +81,9 @@ include('./PHP/bdd.php');
     <!--Fin Carousel-->
 
     <!--Recherher des quartier, rue et date-->
+    <div class="recherche container-fluid text-center mt-3">
+        <h1>Faites votre recherche :</h1>
+</div>
     <div class="input-group input-group-sm mb-3 mx-auto">
         <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Nom du Quartier">
     </div>
@@ -107,14 +110,14 @@ include('./PHP/bdd.php');
                     <option value="3">Three</option>
                 </select>
         </div>
-        <input class="btn btn-primary btn-md mx-auto my-auto" type="submit" value="Recherche">
+        <input class="btn btn-primary btn-md mx-auto mt-3 mb-3" type="submit" value="Recherche">
     </div>
     <!--Fin des recherche-->
 
 
 
 
-    <!-- Début du Footer -->
+    <!-- Dï¿½but du Footer -->
     <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
         <div class="container text-center">
           <small>Copyright &copy; 2019</small>
