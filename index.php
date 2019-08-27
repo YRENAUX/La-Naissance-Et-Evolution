@@ -1,3 +1,6 @@
+<?php
+include('./PHP/bdd.php');
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
