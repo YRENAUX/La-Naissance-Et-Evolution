@@ -19,27 +19,28 @@ include('./PHP/bdd.php');
 <body>
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#">
-                    <img src="./IMG/1024px-Centre_national_de_la_recherche_scientifique.svg.png" width="40" height="40" alt="">
-                  </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
+        <a class="navbar-brand" href="#">
+            <img src="./IMG/1024px-Centre_national_de_la_recherche_scientifique.svg.png" width="40" height="40" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Info</a>
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Info</a>
                 </li>
                 </li>
-              </ul>
-            </div>
-          </nav>
+            </ul>
+        </div>
+    </nav>
     <!--Fin Navbar-->
     <!--Début Carrousel-->
     <div class="container-fluid col-lg-12" style="margin: 0 auto; padding: 0px;width: 100%;">
@@ -83,34 +84,34 @@ include('./PHP/bdd.php');
     <!--Recherher des quartier, rue et date-->
     <div class="recherche container-fluid text-center mt-3">
         <h1>Faites votre recherche :</h1>
-</div>
-    <div class="input-group input-group-sm mb-3 mx-auto">
-        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Nom du Quartier">
     </div>
-    <div class="contrainer-fluid">
-        <div class="row">
-                <select class="custom-select col col-md-3 mx-auto">
-                    <option selected>Date</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
-            
-                <select class="custom-select col col-md-3 mx-auto">
-                    <option selected>Quartier</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
+    <div class="input-group input-group-sm mb-3 mx-auto">
+        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
+            placeholder="Nom du Quartier">
+    </div>
+    <div class="row mx-auto my-auto">
+        <select class="custom-select col col-md-3 mx-auto">
+            <option selected>Date</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
 
-                <select class="custom-select col col-md-3 mx-auto">
-                    <option selected>Rue</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
-        </div>
-        <input class="btn btn-primary btn-md mx-auto mt-3 mb-3" type="submit" value="Recherche">
+        <select class="custom-select col col-md-3 mx-auto">
+            <option selected>Quartier</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+
+        <select class="custom-select col col-md-3 mx-auto">
+            <option selected>Rue</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+    </div>
+    <input class="btn btn-success btn-md mx-auto mt-3 mb-3" type="submit" value="Recherche">
     </div>
     <!--Fin des recherche-->
 
@@ -118,11 +119,11 @@ include('./PHP/bdd.php');
 
 
     <!-- D�but du Footer -->
-    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <footer id="footer sticky-footer">
         <div class="container text-center">
-          <small>Copyright &copy; 2019</small>
+            <small>Copyright &copy; 2019</small>
         </div>
-      </footer>
+    </footer>
     <!--Script Bootstrap-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

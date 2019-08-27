@@ -18,7 +18,7 @@ nav{
     padding: 2px  !important;
     transition: 0.5s !important;
 }
-.btn-primary{
+.btn-success{
     display: flex;
 }
 .input-group{
@@ -26,5 +26,9 @@ nav{
     margin: 2em;
 }
 .recherche{
+    color: white !important;
+}
+footer{
+    background-color:black !important;
     color: white !important;
 }
