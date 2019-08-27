@@ -79,6 +79,47 @@ include('./PHP/bdd.php');
         </div>
     </div>
     <!--Fin Carousel-->
+
+    <!--Recherher des quartier, rue et date-->
+    <div class="input-group input-group-sm mb-3 mx-auto">
+        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Nom du Quartier">
+    </div>
+    <div class="contrainer-fluid">
+        <div class="row">
+                <select class="custom-select col col-md-3 mx-auto">
+                    <option selected>Date</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            
+                <select class="custom-select col col-md-3 mx-auto">
+                    <option selected>Quartier</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+
+                <select class="custom-select col col-md-3 mx-auto">
+                    <option selected>Rue</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+        </div>
+        <input class="btn btn-primary btn-md mx-auto my-auto" type="submit" value="Recherche">
+    </div>
+    <!--Fin des recherche-->
+
+
+
+
+    <!-- Début du Footer -->
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+        <div class="container text-center">
+          <small>Copyright &copy; 2019</small>
+        </div>
+      </footer>
     <!--Script Bootstrap-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

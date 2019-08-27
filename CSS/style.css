@@ -17,3 +17,10 @@ nav{
     padding: 2px  !important;
     transition: 0.5s !important;
 }
+.btn-primary{
+    display: flex;
+}
+.input-group{
+    max-width: 50%;
+    margin: 2em;
+}
