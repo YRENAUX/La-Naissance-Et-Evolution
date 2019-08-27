@@ -1,5 +1,5 @@
 <?php
-include('./PHP/bdd.php');
+include('bdd.php');
 ?>
 
 <!DOCTYPE html>
@@ -43,8 +43,33 @@ include('./PHP/bdd.php');
         </div>
     </nav>
     <!--Fin Navbar-->
+<div class="container">
+<center><h1>RESULTAT DE LA RECHERCHE</h1></center>
+    <?php
+
+// On récupère tout le contenu de la table 
+
+$reponse = $bdd->query('SELECT label FROM quartier');
+
+// On affiche chaque entrée une à une
+
+while ($donnees = $reponse->fetch())
+{
+?>
+    <p>
+    <strong>Date demandée</strong> : <?php/* echo $donnees['Date'];*/ ?><br>
+    Le Quartier est :<?php echo $donnees['label']; ?>,<br>
+     et la rue est :<?php /*echo $donnees['label'];*/ ?> <br>
+    Le nombre d'habitants est de <?php/*echo $donnees['Habitant'];*/ ?> 
+   </p>
+<?php
 
 
+ // Fin du traitement de la requête
+
+$reponse->closeCursor(); 
+}
+?>
 
       <!-- D�but du Footer -->
       <footer id="footer sticky-footer">
