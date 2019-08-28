@@ -112,50 +112,34 @@ qui habite dans cette même rue, et possibilité de comparer 2 années et suivre
             $req = $bdd->prepare('SELECT date FROM personne GROUP BY date ORDER BY date ASC');
             $req->execute();
             while ($donnees = $req->fetch()){
-                $var1 = $donnees['id'];
-                $var2 = $donnees['date'];
-                if ($var1 == $id){
-                    echo '<option value="'.$var1.'">'.$var2.'</option>';
-                }
-
+                    echo '<option value="'.$donnees['date'].'">'.$donnees['date'].'</option>';
                 }
                 $req->closeCursor();
                 ?>
         </select>
 
-        <select class="custom-select col col-md-3 mx-auto" name="quartier" id="quartier">
+        <select class="custom-select col col-md-3 mx-auto" name="label" id="label">
             <option selected>Le Quartier</option>
             <!-- Requ�te php pour les Quartiers -->
             <?php
             $req = $bdd->prepare("SELECT label FROM quartier GROUP BY label");
             $req->execute();
             while ($donnees = $req->fetch()){
-                $var1 = $donnees['id'];
-                $var2 = $donnees['label'];
-                if ($var1 == $id){
-                    echo '<option value="'.$var1.'">'.$var2.'</option>';
-                }
-
-                }
+                echo '<option value="'.$donnees['label'].'">'.$donnees['label'].'</option>';
+            }
                 $req->closeCursor();
             ?>
 
         </select>
 
-        <select class="custom-select col col-md-3 mx-auto"name="rue" id="rue">
+        <select class="custom-select col col-md-3 mx-auto" name="rue" id="rue">
             <option selected>La rue</option>
             <?php
             $req = $bdd->prepare("SELECT rue FROM menage GROUP BY rue");
             $req->execute();
             while ($donnees = $req->fetch()){
-                $var1 = $donnees['id'];
-                $var2 = $donnees['rue'];
-                $var3 = $donnees['idQuartier'];
-                if ($var1 == $id){
-                    echo '<option value="'.$var1.'">'.$var2.'</option>';
-                }
-
-                }
+                echo '<option value="'.$donnees['rue'].'">'.$donnees['rue'].'</option>';
+            }
                 $req->closeCursor();
                 ?>
         </select>
