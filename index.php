@@ -92,9 +92,10 @@ include('./PHP/bdd.php');
     <div class="row mx-auto my-auto">
         <select class="custom-select col col-md-3 mx-auto">
             <option selected>Date</option>
+            <!-- Requète php pour les dates -->
             <?php
-            $req = $bdd->prepare('SELECT date FROM personne');
-        $req->execute();
+            $req = $bdd->prepare('SELECT date FROM personne GROUP BY date ORDER BY date ASC');
+            $req->execute();
             while ($donnees = $req->fetch()){
                 $var1 = $donnees['id'];
                 $var2 = $donnees['date'];
@@ -107,7 +108,7 @@ include('./PHP/bdd.php');
         </select>
 
         <select class="custom-select col col-md-3 mx-auto">
-            <option selected><?php echo $quartier ; ?></option>
+            <option selected>Quartier</option>
             
         </select>
 
