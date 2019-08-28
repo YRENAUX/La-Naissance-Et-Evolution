@@ -52,10 +52,16 @@ include('bdd.php');
 
 // On récupère tout le contenu de la table 
 
-/*$reponse = $bdd->query("SELECT label FROM quartier, menage WHERE quartier.label='petit bois'");
+$reponse = $bdd->query("SELECT label, rue, personne.date FROM quartier, menage, personne LIMIT 3");
 
 // On affiche chaque entrée une à une
+if(isset($_POST['id']) && isset($_POST['date']) && isset($_POST['quartier']) && isset($_POST['rue'])){
+    var_dump ($_POST['date']);
+    var_dump ($_POST['quartier']);
+    var_dump ($_POST['rue']);
 
+}
+/*
 while ($donnees = $reponse->fetch())
 {*/
    

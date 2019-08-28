@@ -88,7 +88,8 @@ include('./PHP/bdd.php');
         <p>Choisissez une date, un quartier et une rue et vous verrez le nombre de menages existant à la date donnée.<br><br>
     </div>
     <div class="row mx-auto my-auto">
-        <select class="custom-select col col-md-3 mx-auto">
+        <form method="POST" action="PHP/resultat.php">
+        <select class="custom-select col col-md-3 mx-auto" name="date" id="date">
             <option selected>La date</option>
             <!-- Requ�te php pour les dates -->
             <?php
@@ -106,7 +107,7 @@ include('./PHP/bdd.php');
                 ?>
         </select>
 
-        <select class="custom-select col col-md-3 mx-auto">
+        <select class="custom-select col col-md-3 mx-auto" name="quartier" id="quartier">
             <option selected>Le Quartier</option>
             <!-- Requ�te php pour les Quartiers -->
             <?php
@@ -125,7 +126,7 @@ include('./PHP/bdd.php');
 
         </select>
 
-        <select class="custom-select col col-md-3 mx-auto">
+        <select class="custom-select col col-md-3 mx-auto"name="rue" id="rue">
             <option selected>La rue</option>
             <?php
             $req = $bdd->prepare("SELECT rue FROM menage GROUP BY rue");
@@ -143,8 +144,7 @@ include('./PHP/bdd.php');
                 ?>
         </select>
     </div><br>
-    <form method="POST">
-        <input class="btn btn-success btn-md mx-auto mt-3 mb-3" type="submit" value="Recherche">
+        <input class="btn btn-success btn-md mx-auto mt-3 mb-3" type="submit" value="Recherche" name="button" id="button">
     </form>
     </div>
     <!--Fin des recherche-->
