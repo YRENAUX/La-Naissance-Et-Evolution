@@ -10,10 +10,13 @@ include('bdd.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Link Bootstrap-->
+    <script src="./JS/jquery.js"></script>
+    <script src="./JS/timeline.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--Link CSS Personnel-->
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/timeline.min.css" />
     <title>Accueil La Naissance Et L'évolution</title>
 </head>
 
@@ -45,7 +48,7 @@ include('bdd.php');
     <!--Fin Navbar-->
 <div class="container">
 <center><h1>RESULTAT DE LA RECHERCHE</h1></center>
-    <?php
+    <?php /* 
 
 // On récupère tout le contenu de la table 
 
@@ -55,22 +58,52 @@ $reponse = $bdd->query("SELECT label, rue FROM quartier, menage WHERE quartier.l
 
 while ($donnees = $reponse->fetch())
 {
-?>
+    */
+    ?>
     <p>
     <strong>Date demandée</strong> : <?php/* echo $donnees['Date'];*/ ?><br>
-    Le Quartier est :<?php echo $donnees['label']; ?>,<br>
+    Le Quartier est :<?php echo $donnees['label']; ?><br>
      et la rue est :<?php echo $donnees['rue']; ?> <br>
-    Le nombre d'habitants est de <?php/*echo $donnees['Habitant'];*/ ?> 
+    Le nombre d'habitants est de : <?php/*echo $donnees['Habitant'];*/ ?> 
    </p>
 <?php
 
 
  // Fin du traitement de la requête
-
+/*
 $reponse->closeCursor(); 
 }
+*/
 ?>
-
+       <div class="container">
+			<br/>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+                    <h3 class="panel-title">Our Journey</h3>
+                </div>
+                <div class="panel-body">
+                	<div class="timeline">
+                        <div class="timeline__wrap">
+                            <div class="timeline__items">
+                            <?php
+                            foreach($result as $row)
+                            {
+                            ?>
+                            	<div class="timeline__item">
+                                    <div class="timeline__content">
+                                    	<h2><?php echo $row[""]; ?></h2>
+                                    	<p><?php echo $row[""]; ?></p>
+                                    </div>
+                                </div>
+                            <?php
+                            }
+                            ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div> 
       <!-- D�but du Footer -->
       <footer id="footer sticky-footer">
         <div class="container text-center">
@@ -78,6 +111,15 @@ $reponse->closeCursor();
         </div>
     </footer>
     <!--Script Bootstrap-->
+    <script>
+
+$(document).ready(function(){
+    jQuery('.timeline').timeline({
+		mode: 'horizontal',
+	    visibleItems: 4,
+	});
+});
+</script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
