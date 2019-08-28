@@ -10,13 +10,13 @@ include('bdd.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Link Bootstrap-->
-    <script src="./JS/jquery.js"></script>
-    <script src="./JS/timeline.min.js"></script>
+   <script src="./JS/jquery.js"></script>
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--Link CSS Personnel-->
     <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="stylesheet" href="./CSS/timeline.min.css" />
+    <link rel="stylesheet" href="../CSS/timeline.css" />
     <title>Accueil La Naissance Et L'évolution</title>
 </head>
 
@@ -24,7 +24,7 @@ include('bdd.php');
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">
-            <img src="./IMG/1024px-Centre_national_de_la_recherche_scientifique.svg.png" width="40" height="40" alt="">
+            <img src="./IMG/simplon.png" width="40" height="40" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,7 @@ include('bdd.php');
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="./index.php">Accueil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
@@ -48,85 +48,90 @@ include('bdd.php');
     <!--Fin Navbar-->
 <div class="container">
 <center><h1>RESULTAT DE LA RECHERCHE</h1></center>
-    <?php /* 
+    <?php 
 
 // On récupère tout le contenu de la table 
 
-$reponse = $bdd->query("SELECT label, rue FROM quartier, menage WHERE quartier.label='petit bois'");
+/*$reponse = $bdd->query("SELECT label FROM quartier, menage WHERE quartier.label='petit bois'");
 
 // On affiche chaque entrée une à une
 
 while ($donnees = $reponse->fetch())
-{
-    */
+{*/
+   
     ?>
     <p>
-    <strong>Date demandée</strong> : <?php/* echo $donnees['Date'];*/ ?><br>
+    <strong>Date demandée</strong> : <?php/* echo $donnees['Date'];*/?><br>
     Le Quartier est :<?php/* echo $donnees['label'];*/ ?><br>
      et la rue est :<?php /* echo $donnees['rue'];*/ ?> <br>
-    Le nombre d'habitants est de : <?php/*echo $donnees['Habitant'];*/ ?> 
-   </p>
-
+    Le nombre de menage est de : <?php/*echo $donnees['menage'];*/ ?> 
+   </p><br><br>
   
-<?php
 
-$query = "SELECT DISTINCT date  FROM personne ORDER BY date ASC limit 200";
+<!--
+
+$reponse->closeCursor(); */
+
+$query = "SELECT DISTINCT  date  FROM personne  ORDER BY date ASC ";
 $statement = $bdd->prepare($query);
 $statement->execute();
-$result = $statement->fetchAll();
+$result = $statement->fetchAll();-->
 
- // Fin du traitement de la requête
-/*
-$reponse->closeCursor(); 
-}
-*/
-?>
-       <div class="container">
-			<br/>
-			<div class="panel panel-default">
-				<div class="panel-heading">
-                    <h3 class="panel-title">Notre Période</h3>
-                </div>
-                <div class="panel-body">
-                	<div class="timeline">
-                        <div class="timeline__wrap">
-                            <div class="timeline__items">
-                            <?php
-                            foreach($result as $row)
-                            {
-                            ?>
-                            	<div class="timeline__item">
-                                    <div class="timeline__content">
-                                    	<h2><?php echo $row["date"]; ?></h2>
-                                    	<p><?php /*echo $row["date"];*/ ?></p>
-                                    </div1>
-                                </div>
-                            <?php
-                            }
-                            
-                            ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-			</div>
-		</div> 
+  
+<ul id='timeline'>
+  <li class='event down'>
+    <div class='content'>
+      <div class="avatar">me</div>
+    </div>
+   
+    <div class="dot">
+      <span class='circle'></span>
+    </div>
+    <div class='date'>2008</div>
+  </li>
+  <li class='event up'>
+    <div class='content'>
+      <div class="avatar">me</div>
+    </div>
+    <div class="dot">
+      <span class='circle'></span>
+    </div>
+    <div class='date'>2009</div>
+  </li>
+  <li class='event down'>
+    <div class='content'>
+      <div class="avatar">me</div>
+    </div>
+    <div class="dot">
+      <span class='circle'></span>
+    </div>
+    <div class='date'>2010</div>
+  </li>
+  <li class='event up'>
+    <div class='content'>
+      <div class="avatar">me</div>
+    </div>
+    <div class="dot">
+      <span class='circle'></span>
+    </div>
+    <div class="date">2011</div>
+  </li>
+  <li class="last">
+    <div class="rectangle">
+      story continuing ...
+    </div>
+  </li>
+</ul>
+       
       <!-- D�but du Footer -->
       <footer id="footer sticky-footer">
         <div class="container text-center">
             <small>Copyright &copy; 2019</small>
         </div>
     </footer>
-    <!--Script Bootstrap-->
-    <script>
+    
 
-$(document).ready(function(){
-    jQuery('.timeline').timeline({
-		mode: 'horizontal',
-	    visibleItems: 4,
-	});
-});
-</script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>

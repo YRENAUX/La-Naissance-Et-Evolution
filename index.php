@@ -29,7 +29,7 @@ include('./PHP/bdd.php');
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
@@ -83,7 +83,9 @@ include('./PHP/bdd.php');
 
     <!--Recherher des quartier, rue et date-->
     <div class="recherche container-fluid text-center mt-3">
-        <h1>Faites votre recherche :</h1>
+        <h1>Faites votre recherche :</h1><br>
+
+        <p>Choisissez une date, un quartier et une rue et vous verrez le nombre de menages existant à la date donnée.<br><br>
     </div>
     <div class="row mx-auto my-auto">
         <select class="custom-select col col-md-3 mx-auto">
@@ -100,13 +102,14 @@ include('./PHP/bdd.php');
                 }
 
                 }
+                $req->closeCursor();
                 ?>
         </select>
 
         <select class="custom-select col col-md-3 mx-auto">
             <option selected>Le Quartier</option>
             <!-- Requ�te php pour les Quartiers -->
-        <?php
+            <?php
             $req = $bdd->prepare("SELECT label FROM quartier GROUP BY label");
             $req->execute();
             while ($donnees = $req->fetch()){
@@ -117,8 +120,9 @@ include('./PHP/bdd.php');
                 }
 
                 }
+                $req->closeCursor();
             ?>
-            
+
         </select>
 
         <select class="custom-select col col-md-3 mx-auto">
@@ -133,13 +137,14 @@ include('./PHP/bdd.php');
                 if ($var1 == $id){
                     echo '<option value="'.$var1.'">'.$var2.'</option>';
                 }
-                
+
                 }
+                $req->closeCursor();
                 ?>
         </select>
-    </div>
+    </div><br>
     <form method="POST">
-    <input class="btn btn-success btn-md mx-auto mt-3 mb-3" type="submit"  value="Recherche">
+        <input class="btn btn-success btn-md mx-auto mt-3 mb-3" type="submit" value="Recherche">
     </form>
     </div>
     <!--Fin des recherche-->
