@@ -49,7 +49,7 @@ include('bdd.php');
 
 // On récupère tout le contenu de la table 
 
-$reponse = $bdd->query('SELECT label FROM quartier');
+$reponse = $bdd->query("SELECT label, rue FROM quartier, menage WHERE quartier.label='rue'");
 
 // On affiche chaque entrée une à une
 
@@ -59,7 +59,7 @@ while ($donnees = $reponse->fetch())
     <p>
     <strong>Date demandée</strong> : <?php/* echo $donnees['Date'];*/ ?><br>
     Le Quartier est :<?php echo $donnees['label']; ?>,<br>
-     et la rue est :<?php /*echo $donnees['label'];*/ ?> <br>
+     et la rue est :<?php echo $donnees['rue']; ?> <br>
     Le nombre d'habitants est de <?php/*echo $donnees['Habitant'];*/ ?> 
    </p>
 <?php

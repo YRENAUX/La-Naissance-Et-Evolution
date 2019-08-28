@@ -91,27 +91,21 @@ include('./PHP/bdd.php');
     </div>
     <div class="row mx-auto my-auto">
         <select class="custom-select col col-md-3 mx-auto">
-            <option selected>Date</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option selected><?php echo $date ; ?></option>
+            
         </select>
 
         <select class="custom-select col col-md-3 mx-auto">
-            <option selected>Quartier</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option selected><?php echo $quartier ; ?></option>
+            
         </select>
 
         <select class="custom-select col col-md-3 mx-auto">
-            <option selected>Rue</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            <option selected><?php echo $rue ; ?></option>
+            
         </select>
     </div>
-    <input class="btn btn-success btn-md mx-auto mt-3 mb-3" type="submit" value="Recherche">
+    <input class="btn btn-success btn-md mx-auto mt-3 mb-3" type="submit"  value="Recherche">
     </div>
     <!--Fin des recherche-->
 
