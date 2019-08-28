@@ -84,6 +84,22 @@ include('./PHP/bdd.php');
     <!--Recherher des quartier, rue et date-->
     <div class="recherche container-fluid text-center mt-3">
         <h1>Faites votre recherche :</h1><br>
+        <h3>----- La naissance et L'évolution démographique des rues -----<br>
+
+
+Contexte : 
+
+Utilisateur Lambda peut consulté le site et découvrir la démographie des rues de Charleville sur la période de 1739 1876
+On entends par ce faites de pouvoir consulté, qui à habiter dans ces rues et suivre l'évolution croissante ou décroissante au long de cette période d'années
+<br>
+L'objectif : 
+
+Un site ludique pour tous et pour voir/apprendre l'évolution des rues de Charleville.
+<br>
+Présentation : 
+
+En fonction d'une année choisis une carte s'ouvre avec le nombre de personnes (Identité des personnes) 
+qui habite dans cette même rue, et possibilité de comparer 2 années et suivre son évolution.</h3>
 
         <p>Choisissez une date, un quartier et une rue et vous verrez le nombre de menages existant à la date donnée.<br><br>
     </div>
