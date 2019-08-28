@@ -33,7 +33,7 @@ include('bdd.php');
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="./index.php">Accueil <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="../index.php">Accueil <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
@@ -52,32 +52,34 @@ include('bdd.php');
 
 // On récupère tout le contenu de la table 
 
-$reponse = $bdd->query("SELECT label, rue, personne.date FROM quartier, menage, personne LIMIT 3");
+$reponse = $bdd->query("SELECT label, rue, date FROM quartier, menage, personne LIMIT 1");
 
 // On affiche chaque entrée une à une
 if(isset($_POST['id']) && isset($_POST['date']) && isset($_POST['quartier']) && isset($_POST['rue'])){
-    var_dump ($_POST['date']);
+   var_dump ($_POST['date']);
     var_dump ($_POST['quartier']);
     var_dump ($_POST['rue']);
 
 }
-/*
+
 while ($donnees = $reponse->fetch())
-{*/
+{
    
     ?>
     <p>
-    <strong>Date demandée</strong> : <?php/* echo $donnees['Date'];*/?><br>
-    Le Quartier est :<?php/* echo $donnees['label'];*/ ?><br>
-     et la rue est :<?php /* echo $donnees['rue'];*/ ?> <br>
+    <strong>Date demandée</strong> : <?php echo $donnees['date'];?><br>
+    Le Quartier est :<?php echo $donnees['label']; ?><br>
+     et la rue est :<?php  echo $donnees['rue']; ?> <br>
     Le nombre de menage est de : <?php/*echo $donnees['menage'];*/ ?> 
    </p><br><br>
   
+<?php
 
+}
+$reponse->closeCursor();
+
+?>
 <!--
-
-$reponse->closeCursor(); */
-
 $query = "SELECT DISTINCT  date  FROM personne  ORDER BY date ASC ";
 $statement = $bdd->prepare($query);
 $statement->execute();

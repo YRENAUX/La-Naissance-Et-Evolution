@@ -114,10 +114,10 @@ include('./PHP/bdd.php');
             $req = $bdd->prepare("SELECT label FROM quartier GROUP BY label");
             $req->execute();
             while ($donnees = $req->fetch()){
-                $var1 = $donnees['id'];
-                $var2 = $donnees['label'];
+                $var3= $donnees['id'];
+                $var4 = $donnees['label'];
                 if ($var1 == $id){
-                    echo '<option value="'.$var1.'">'.$var2.'</option>';
+                    echo '<option value="'.$var3.'">'.$var4.'</option>';
                 }
 
                 }
@@ -132,11 +132,11 @@ include('./PHP/bdd.php');
             $req = $bdd->prepare("SELECT rue FROM menage GROUP BY rue");
             $req->execute();
             while ($donnees = $req->fetch()){
-                $var1 = $donnees['id'];
-                $var2 = $donnees['rue'];
-                $var3 = $donnees['idQuartier'];
+                $var5 = $donnees['id'];
+                $var6 = $donnees['rue'];
+                $var7 = $donnees['idQuartier'];
                 if ($var1 == $id){
-                    echo '<option value="'.$var1.'">'.$var2.'</option>';
+                    echo '<option value="'.$var5.'">'.$var6.'</option>';
                 }
 
                 }
