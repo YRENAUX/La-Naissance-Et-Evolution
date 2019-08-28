@@ -92,7 +92,7 @@ include('./PHP/bdd.php');
     <div class="row mx-auto my-auto">
         <select class="custom-select col col-md-3 mx-auto">
             <option selected>Date</option>
-            <!-- Requète php pour les dates -->
+            <!-- Requï¿½te php pour les dates -->
             <?php
             $req = $bdd->prepare('SELECT date FROM personne GROUP BY date ORDER BY date ASC');
             $req->execute();

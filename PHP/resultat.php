@@ -62,12 +62,18 @@ while ($donnees = $reponse->fetch())
     ?>
     <p>
     <strong>Date demandée</strong> : <?php/* echo $donnees['Date'];*/ ?><br>
-    Le Quartier est :<?php echo $donnees['label']; ?><br>
-     et la rue est :<?php echo $donnees['rue']; ?> <br>
+    Le Quartier est :<?php/* echo $donnees['label'];*/ ?><br>
+     et la rue est :<?php /* echo $donnees['rue'];*/ ?> <br>
     Le nombre d'habitants est de : <?php/*echo $donnees['Habitant'];*/ ?> 
    </p>
+
+  
 <?php
 
+$query = "SELECT DISTINCT date  FROM personne ORDER BY date ASC limit 200";
+$statement = $bdd->prepare($query);
+$statement->execute();
+$result = $statement->fetchAll();
 
  // Fin du traitement de la requête
 /*
@@ -79,7 +85,7 @@ $reponse->closeCursor();
 			<br/>
 			<div class="panel panel-default">
 				<div class="panel-heading">
-                    <h3 class="panel-title">Our Journey</h3>
+                    <h3 class="panel-title">Notre Période</h3>
                 </div>
                 <div class="panel-body">
                 	<div class="timeline">
@@ -91,12 +97,13 @@ $reponse->closeCursor();
                             ?>
                             	<div class="timeline__item">
                                     <div class="timeline__content">
-                                    	<h2><?php echo $row[""]; ?></h2>
-                                    	<p><?php echo $row[""]; ?></p>
-                                    </div>
+                                    	<h2><?php echo $row["date"]; ?></h2>
+                                    	<p><?php /*echo $row["date"];*/ ?></p>
+                                    </div1>
                                 </div>
                             <?php
                             }
+                            
                             ?>
                             </div>
                         </div>
