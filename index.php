@@ -91,8 +91,19 @@ include('./PHP/bdd.php');
     </div>
     <div class="row mx-auto my-auto">
         <select class="custom-select col col-md-3 mx-auto">
-            <option selected><?php echo $date ; ?></option>
-            
+            <option selected>Date</option>
+            <?php
+            $req = $bdd->prepare('SELECT date FROM personne');
+        $req->execute();
+            while ($donnees = $req->fetch()){
+                $var1 = $donnees['id'];
+                $var2 = $donnees['date'];
+                if ($var1 == $id){
+                    echo '<option value="'.$var1.'">'.$var2.'</option>';
+                }
+
+                }
+                ?>
         </select>
 
         <select class="custom-select col col-md-3 mx-auto">
