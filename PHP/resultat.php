@@ -16,7 +16,7 @@ include('bdd.php');
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--Link CSS Personnel-->
     <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="stylesheet" href="../CSS/timeline.css" />
+    <link rel="stylesheet" href="../CSS/timeline.css">
     <title>Accueil La Naissance Et L'évolution</title>
 </head>
 
