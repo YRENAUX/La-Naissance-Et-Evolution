@@ -85,10 +85,6 @@ include('./PHP/bdd.php');
     <div class="recherche container-fluid text-center mt-3">
         <h1>Faites votre recherche :</h1>
     </div>
-    <div class="input-group input-group-sm mb-3 mx-auto">
-        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
-            placeholder="Nom du Quartier">
-    </div>
     <div class="row mx-auto my-auto">
         <select class="custom-select col col-md-3 mx-auto">
             <option selected>La date</option>
