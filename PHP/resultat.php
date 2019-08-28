@@ -49,7 +49,7 @@ include('bdd.php');
 
 // On récupère tout le contenu de la table 
 
-$reponse = $bdd->query("SELECT label, rue FROM quartier, menage WHERE quartier.label='rue'");
+$reponse = $bdd->query("SELECT label, rue FROM quartier, menage WHERE quartier.label='petit bois'");
 
 // On affiche chaque entrée une à une
 
