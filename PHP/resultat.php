@@ -22,13 +22,8 @@ $test2 = $_POST['rue'];
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--Link CSS Personnel-->
-<<<<<<< HEAD
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/timeline.css">
-=======
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="stylesheet" href="../CSS/timeline.css" />
->>>>>>> 6f8092bcf4cc2724fc226529967af7ccb44df2b4
     <title>Accueil La Naissance Et L'évolution</title>
 </head>
 

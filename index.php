@@ -106,7 +106,6 @@ qui habite dans cette même rue, et possibilité de comparer 2 années et suivre
     <div class="row mx-auto my-auto">
         <form method="POST" action="PHP/resultat.php">
         <select class="custom-select col col-md-3 mx-auto" name="date" id="date">
-            <option selected>La date</option>
             <!-- Requ�te php pour les dates -->
             <?php
             $req = $bdd->prepare('SELECT date FROM personne GROUP BY date ORDER BY date ASC');
@@ -118,8 +117,7 @@ qui habite dans cette même rue, et possibilité de comparer 2 années et suivre
                 ?>
         </select>
 
-        <select class="custom-select col col-md-3 mx-auto" name="label" id="label">
-            <option selected>Le Quartier</option>
+        <select required class="custom-select col col-md-3 mx-auto" name="label" id="label">
             <!-- Requ�te php pour les Quartiers -->
             <?php
             $req = $bdd->prepare("SELECT label FROM quartier GROUP BY label");
@@ -132,8 +130,7 @@ qui habite dans cette même rue, et possibilité de comparer 2 années et suivre
 
         </select>
 
-        <select class="custom-select col col-md-3 mx-auto" name="rue" id="rue">
-            <option selected>La rue</option>
+        <select required class="custom-select col col-md-3 mx-auto" name="rue" id="rue">
             <?php
             $req = $bdd->prepare("SELECT rue FROM menage GROUP BY rue");
             $req->execute();
