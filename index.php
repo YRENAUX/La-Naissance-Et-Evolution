@@ -20,7 +20,7 @@ include('./PHP/bdd.php');
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="#">
-            <img src="./IMG/1024px-Centre_national_de_la_recherche_scientifique.svg.png" width="40" height="40" alt="">
+            <img src="./IMG/simplon.png" width="100" height="100" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,7 +92,7 @@ include('./PHP/bdd.php');
     <div class="row mx-auto my-auto">
         <select class="custom-select col col-md-3 mx-auto">
             <option selected>Date</option>
-            <!-- Requète php pour les dates -->
+            <!-- Requï¿½te php pour les dates -->
             <?php
             $req = $bdd->prepare('SELECT date FROM personne GROUP BY date ORDER BY date ASC');
             $req->execute();
