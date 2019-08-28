@@ -109,7 +109,7 @@ include('./PHP/bdd.php');
 
         <select class="custom-select col col-md-3 mx-auto">
             <option selected>Le Quartier</option>
-            <!-- Requète php pour les Quartiers -->
+            <!-- Requï¿½te php pour les Quartiers -->
         <?php
             $req = $bdd->prepare("SELECT label FROM quartier GROUP BY label");
             $req->execute();
@@ -137,6 +137,7 @@ include('./PHP/bdd.php');
                 if ($var1 == $id){
                     echo '<option value="'.$var1.'">'.$var2.'</option>';
                 }
+                
                 }
                 ?>
         </select>
