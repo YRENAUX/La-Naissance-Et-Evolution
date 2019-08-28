@@ -91,7 +91,7 @@ include('./PHP/bdd.php');
     </div>
     <div class="row mx-auto my-auto">
         <select class="custom-select col col-md-3 mx-auto">
-            <option selected>Date</option>
+            <option selected>La date</option>
             <!-- Requï¿½te php pour les dates -->
             <?php
             $req = $bdd->prepare('SELECT date FROM personne GROUP BY date ORDER BY date ASC');
@@ -108,16 +108,42 @@ include('./PHP/bdd.php');
         </select>
 
         <select class="custom-select col col-md-3 mx-auto">
-            <option selected>Quartier</option>
+            <option selected>Le Quartier</option>
+            <!-- Requète php pour les Quartiers -->
+        <?php
+            $req = $bdd->prepare("SELECT label FROM quartier GROUP BY label");
+            $req->execute();
+            while ($donnees = $req->fetch()){
+                $var1 = $donnees['id'];
+                $var2 = $donnees['label'];
+                if ($var1 == $id){
+                    echo '<option value="'.$var1.'">'.$var2.'</option>';
+                }
+
+                }
+            ?>
             
         </select>
 
         <select class="custom-select col col-md-3 mx-auto">
-            <option selected><?php echo $rue ; ?></option>
-            
+            <option selected>La rue</option>
+            <?php
+            $req = $bdd->prepare("SELECT rue FROM menage GROUP BY rue");
+            $req->execute();
+            while ($donnees = $req->fetch()){
+                $var1 = $donnees['id'];
+                $var2 = $donnees['rue'];
+                $var3 = $donnees['idQuartier'];
+                if ($var1 == $id){
+                    echo '<option value="'.$var1.'">'.$var2.'</option>';
+                }
+                }
+                ?>
         </select>
     </div>
+    <form method="POST">
     <input class="btn btn-success btn-md mx-auto mt-3 mb-3" type="submit"  value="Recherche">
+    </form>
     </div>
     <!--Fin des recherche-->
 
