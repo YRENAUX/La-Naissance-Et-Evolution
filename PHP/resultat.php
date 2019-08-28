@@ -15,8 +15,13 @@ include('bdd.php');
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--Link CSS Personnel-->
+<<<<<<< HEAD
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/timeline.css">
+=======
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="../CSS/timeline.css" />
+>>>>>>> 6f8092bcf4cc2724fc226529967af7ccb44df2b4
     <title>Accueil La Naissance Et L'évolution</title>
 </head>
 
@@ -52,10 +57,16 @@ include('bdd.php');
 
 // On récupère tout le contenu de la table 
 
-/*$reponse = $bdd->query("SELECT label FROM quartier, menage WHERE quartier.label='petit bois'");
+$reponse = $bdd->query("SELECT label, rue, personne.date FROM quartier, menage, personne LIMIT 3");
 
 // On affiche chaque entrée une à une
+if(isset($_POST['id']) && isset($_POST['date']) && isset($_POST['quartier']) && isset($_POST['rue'])){
+    var_dump ($_POST['date']);
+    var_dump ($_POST['quartier']);
+    var_dump ($_POST['rue']);
 
+}
+/*
 while ($donnees = $reponse->fetch())
 {*/
    
@@ -81,44 +92,44 @@ $result = $statement->fetchAll();-->
 <ul id='timeline'>
   <li class='event down'>
     <div class='content'>
-      <div class="avatar">me</div>
+      <div class="avatar">Info Extrait bdd</div>
     </div>
    
     <div class="dot">
       <span class='circle'></span>
     </div>
-    <div class='date'>2008</div>
+    <div class='date'>1740</div>
   </li>
   <li class='event up'>
     <div class='content'>
-      <div class="avatar">me</div>
+      <div class="avatar">Info Extrait bdd</div>
     </div>
     <div class="dot">
       <span class='circle'></span>
     </div>
-    <div class='date'>2009</div>
+    <div class='date'>1780</div>
   </li>
   <li class='event down'>
     <div class='content'>
-      <div class="avatar">me</div>
+      <div class="avatar">Info Extrait bdd</div>
     </div>
     <div class="dot">
       <span class='circle'></span>
     </div>
-    <div class='date'>2010</div>
+    <div class='date'>1810</div>
   </li>
   <li class='event up'>
     <div class='content'>
-      <div class="avatar">me</div>
+      <div class="avatar">Info Extrait bdd</div>
     </div>
     <div class="dot">
       <span class='circle'></span>
     </div>
-    <div class="date">2011</div>
+    <div class="date">1850</div>
   </li>
   <li class="last">
     <div class="rectangle">
-      story continuing ...
+      Histoire à continuer ...
     </div>
   </li>
 </ul>
