@@ -16,7 +16,7 @@ include('bdd.php');
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--Link CSS Personnel-->
     <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="stylesheet" href="../CSS/timeline.css">
+    <link rel="stylesheet" href="../CSS/timeline.css" />
     <title>Accueil La Naissance Et L'évolution</title>
 </head>
 
@@ -81,44 +81,44 @@ $result = $statement->fetchAll();-->
 <ul id='timeline'>
   <li class='event down'>
     <div class='content'>
-      <div class="avatar">me</div>
+      <div class="avatar">Info Extrait bdd</div>
     </div>
    
     <div class="dot">
       <span class='circle'></span>
     </div>
-    <div class='date'>2008</div>
+    <div class='date'>1740</div>
   </li>
   <li class='event up'>
     <div class='content'>
-      <div class="avatar">me</div>
+      <div class="avatar">Info Extrait bdd</div>
     </div>
     <div class="dot">
       <span class='circle'></span>
     </div>
-    <div class='date'>2009</div>
+    <div class='date'>1780</div>
   </li>
   <li class='event down'>
     <div class='content'>
-      <div class="avatar">me</div>
+      <div class="avatar">Info Extrait bdd</div>
     </div>
     <div class="dot">
       <span class='circle'></span>
     </div>
-    <div class='date'>2010</div>
+    <div class='date'>1810</div>
   </li>
   <li class='event up'>
     <div class='content'>
-      <div class="avatar">me</div>
+      <div class="avatar">Info Extrait bdd</div>
     </div>
     <div class="dot">
       <span class='circle'></span>
     </div>
-    <div class="date">2011</div>
+    <div class="date">1850</div>
   </li>
   <li class="last">
     <div class="rectangle">
-      story continuing ...
+      Histoire à continuer ...
     </div>
   </li>
 </ul>
