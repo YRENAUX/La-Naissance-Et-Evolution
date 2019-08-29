@@ -1,6 +1,17 @@
 <?php
 include('./PHP/bdd.php');
+
+
 ?>
+<!--Requète SQL de phpmyadmin-->
+SELECT *
+FROM menage 
+INNER JOIN quartier ON quartier.id = menage.id
+INNER JOIN posseder ON posseder.id_Menage = menage.id
+wHERE posseder.date = '1739-01-01';
+
+<!--Fin de la requète-->
+
 <!DOCTYPE html>
 <html lang="fr">
 
