@@ -4,12 +4,12 @@ include('./PHP/bdd.php');
 
 ?>
 <!--Requète SQL de phpmyadmin-->
-SELECT *
+<!--SELECT *
 FROM menage 
 INNER JOIN quartier ON quartier.id = menage.id
 INNER JOIN posseder ON posseder.id_Menage = menage.id
 wHERE posseder.date = '1739-01-01';
-
+-->
 <!--Fin de la requète-->
 
 <!DOCTYPE html>
@@ -127,14 +127,14 @@ qui habite dans cette même rue, et possibilité de comparer 2 années et suivre
                 $req->closeCursor();
                 ?>
         </select>
-
+            
         <select required class="custom-select col col-md-3 mx-auto" name="label" id="label">
             <!-- Requ�te php pour les Quartiers -->
             <?php
-            $req = $bdd->prepare("SELECT label FROM quartier GROUP BY label");
+            $req = $bdd->prepare("SELECT * FROM quartier GROUP BY label");
             $req->execute();
             while ($donnees = $req->fetch()){
-                echo '<option value="'.$donnees['label'].'">'.$donnees['label'].'</option>';
+                echo '<option value="'.$donnees['id'].'_'.$donnees['label'].'">'.$donnees['label'].'</option>';
             }
                 $req->closeCursor();
             ?>
