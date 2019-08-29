@@ -66,7 +66,7 @@ $test2 = $_POST['rue'];
 
              
 ?>  
-    <p>
+    <p style="text-align:center;">
     <strong>Date demandée</strong> : <?php  echo date_format($test,'d-m-Y'); ?><br>
     Le Quartier est : <?php  echo $test1[1]; ?><br>
      et la rue est : <?php  echo $test2; ?><br>
@@ -109,18 +109,16 @@ $test2 = $_POST['rue'];
   </li>
   <li class='event up'>
     <div class='content'>
-      <div class="avatar"> <strong>Date demandée</strong> : 01-01-1850<br>
-    Le Quartier est : Belair<br>
-     et la rue est : Place du Saint-Sépulcre<br>
-    Le nombre de menage est de :  
-      <?php 
-      //if()
-      echo sizeof($row = $req->fetchAll()); ?><br></div>
+      <div class="avatar"><strong>Date demandée</strong> : <?php  echo date_format($test,'d-m-Y'); ?><br>
+    Quartier : <?php  echo $test1[1]; ?><br>
+    Rue : <?php  echo $test2; ?><br>
+    Nombre de Menage : <?php   echo sizeof($row = $req->fetchAll());?>
+    </div>
     </div>
     <div class="dot">
       <span class='circle'></span>
     </div>
-    <div class="date">1850</div>
+    <div class='date'>1850</div>
   </li>
   <li class="last">
     <div class="rectangle">
