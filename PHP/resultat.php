@@ -57,7 +57,7 @@ $test2 = $_POST['rue'];
 <center><h1>RESULTAT DE LA RECHERCHE</h1></center>
 <?php
 
-             $req = $bdd->prepare('SELECT DISTINCT menage.id FROM menage INNER JOIN quartier ON quartier.id = menage.id_Quartier INNER JOIN personne ON personne.id_Menage = menage.id WHERE quartier.id = :test1 AND menage.rue = :test2 AND year(personne.date) = :dates ORDER BY id_Quartier ASC ');
+             $req = $bdd->prepare('SELECT DISTINCT menage.id FROM menage INNER JOIN quartier ON quartier.id = '64291' INNER JOIN personne ON personne.id_Menage = menage.id WHERE quartier.id = :test1 AND menage.rue = :test2 AND year(personne.date) = :dates ORDER BY id_Quartier ASC ');
              $req->execute(array(
                'test2' => $test2,
                'test1' => $test1[0],
@@ -72,7 +72,7 @@ $test2 = $_POST['rue'];
      et la rue est : <?php  echo $test2; ?><br>
     Le nombre de menage est de :  
       <?php 
-      if()
+      //if()
       echo sizeof($row = $req->fetchAll()); ?><br>
     </p><br><br>
                 
@@ -88,7 +88,7 @@ $result = $statement->fetchAll();-->
 <ul id='timeline'>
   <li class='event down'>
     <div class='content'>
-      <div class="avatar"><?php echo date_format($test,'d-m-Y'); ?><br> </div>
+      <div class="avatar">Info Extrait BDD<br> </div>
     </div>
    
     <div class="dot">
@@ -116,7 +116,15 @@ $result = $statement->fetchAll();-->
   </li>
   <li class='event up'>
     <div class='content'>
-      <div class="avatar">Info Extrait bdd</div>
+      <div class="avatar"><p>
+    <strong>Date demandée</strong> : <?php  echo date_format($test,'d-m-Y'); ?><br>
+    Le Quartier est : <?php  echo $test1[1]; ?><br>
+     et la rue est : <?php  echo $test2; ?><br>
+    Le nombre de menage est de :  
+      <?php 
+      //if()
+      echo sizeof($row = $req->fetchAll()); ?><br>
+    </p><br></div>
     </div>
     <div class="dot">
       <span class='circle'></span>
