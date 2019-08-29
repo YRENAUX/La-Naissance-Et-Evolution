@@ -81,7 +81,7 @@ $test2 = $_POST['rue'];
 <ul id='timeline'>
   <li class='event down'>
     <div class='content'>
-      <div class="avatar">Info Extrait bdd<br> </div>
+      <div class="avatar">Info Extraite base de données<br> </div>
     </div>
    
     <div class="dot">
@@ -91,7 +91,7 @@ $test2 = $_POST['rue'];
   </li>
   <li class='event up'>
     <div class='content'>
-      <div class="avatar">Info Extrait bdd</div>
+      <div class="avatar">Info Extraite base de données</div>
     </div>
     <div class="dot">
       <span class='circle'></span>
@@ -100,7 +100,7 @@ $test2 = $_POST['rue'];
   </li>
   <li class='event down'>
     <div class='content'>
-      <div class="avatar">Info Extrait bdd</div>
+      <div class="avatar">Info Extraite base de données</div>
     </div>
     <div class="dot">
       <span class='circle'></span>
@@ -109,9 +109,9 @@ $test2 = $_POST['rue'];
   </li>
   <li class='event up'>
     <div class='content'>
-      <div class="avatar"> <strong>Date demandée</strong> : <?php  echo date_format($test,'d-m-Y'); ?><br>
-    Le Quartier est : <?php  echo $test1[1]; ?><br>
-     et la rue est : <?php  echo $test2; ?><br>
+      <div class="avatar"> <strong>Date demandée</strong> : 01-01-1850<br>
+    Le Quartier est : Belair<br>
+     et la rue est : Place du Saint-Sépulcre<br>
     Le nombre de menage est de :  
       <?php 
       //if()

@@ -40,23 +40,24 @@
 	position: relative;
   }
   .avatar {
-	width: 100px;
-	height: 30px;
+	width: 220px;
+	height: 12em;
 	display: block;
-	border-radius: 50%;
-	border: 6px solid #bada55;
+	border-radius: 5%;
+	border: 3px solid #bada55;
 	position: absolute;
 	margin: 0 auto;
 	left: 0;
 	right: 0;
 	text-align: center;
-	line-height: 60px;
+	font-size: 14px;
+	line-height: 30px;
 	background: #fffff0;
   }
   .content:before {
 	content: '';
 	width: 50px;
-	height: 100px;
+	height: 200px;
 	left: 50%;
 	margin-left: -2px;
 	position: absolute;
@@ -73,7 +74,7 @@
 	left: 100px;
   }
   li.up .content {
-	margin-top: -106px;
+	margin-top: -206px;
   }
   li.up .content:before {
 	border-left: 4px solid #f98262;
