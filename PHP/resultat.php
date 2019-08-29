@@ -76,19 +76,12 @@ $test2 = $_POST['rue'];
       echo sizeof($row = $req->fetchAll()); ?><br>
     </p><br><br>
                 
-   
-  
-<!--
-$query = "SELECT DISTINCT  date  FROM personne  ORDER BY date ASC ";
-$statement = $bdd->prepare($query);
-$statement->execute();
-$result = $statement->fetchAll();-->
-
+ 
   
 <ul id='timeline'>
   <li class='event down'>
     <div class='content'>
-      <div class="avatar"><?php echo date_format($test,'d-m-Y'); ?><br> </div>
+      <div class="avatar">Info Extrait bdd<br> </div>
     </div>
    
     <div class="dot">
@@ -116,7 +109,13 @@ $result = $statement->fetchAll();-->
   </li>
   <li class='event up'>
     <div class='content'>
-      <div class="avatar">Info Extrait bdd</div>
+      <div class="avatar"> <strong>Date demandée</strong> : <?php  echo date_format($test,'d-m-Y'); ?><br>
+    Le Quartier est : <?php  echo $test1[1]; ?><br>
+     et la rue est : <?php  echo $test2; ?><br>
+    Le nombre de menage est de :  
+      <?php 
+      //if()
+      echo sizeof($row = $req->fetchAll()); ?><br></div>
     </div>
     <div class="dot">
       <span class='circle'></span>
