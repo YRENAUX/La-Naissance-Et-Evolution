@@ -72,8 +72,12 @@ $test2 = $_POST['rue'];
      et la rue est : <?php  echo $test2; ?><br>
     Le nombre de menage est de :  
       <?php 
-      if()
-      echo sizeof($row = $req->fetchAll()); ?><br>
+       if( $test2 == "N/A"){
+        echo sizeof($row = $req->fetchAll()); 
+       }else{
+        echo sizeof($row = $req->fetchAll());
+       }
+       ?><br>
     </p><br><br>
                 
    
