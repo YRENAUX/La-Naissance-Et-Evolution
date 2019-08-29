@@ -40,7 +40,7 @@
 	position: relative;
   }
   .avatar {
-	width: 30px;
+	width: 100px;
 	height: 30px;
 	display: block;
 	border-radius: 50%;
@@ -50,7 +50,7 @@
 	left: 0;
 	right: 0;
 	text-align: center;
-	line-height: 30px;
+	line-height: 60px;
 	background: #fffff0;
   }
   .content:before {

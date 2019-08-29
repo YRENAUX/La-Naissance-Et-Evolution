@@ -2,7 +2,7 @@
 include('bdd.php');
 
 
-$test = $_POST['date'];
+$test = date_create( $_POST['date']);
 $test1 = $_POST['label'];
 $test2 = $_POST['rue'];
 
@@ -57,7 +57,7 @@ $test2 = $_POST['rue'];
 <center><h1>RESULTAT DE LA RECHERCHE</h1></center>
 
     <p>
-    <strong>Date demandée</strong> : <?php echo $test; ?><br>
+    <strong>Date demandée</strong> : <?php echo date_format($test,'d-m-Y'); ?><br>
     Le Quartier est : <?php echo $test1; ?><br>
      et la rue est : <?php echo $test2; ?><br>
     Le nombre de menage est de :  
@@ -73,7 +73,7 @@ $result = $statement->fetchAll();-->
 <ul id='timeline'>
   <li class='event down'>
     <div class='content'>
-      <div class="avatar">Info Extrait bdd</div>
+      <div class="avatar"><?php echo date_format($test,'d-m-Y'); ?><br> </div>
     </div>
    
     <div class="dot">
